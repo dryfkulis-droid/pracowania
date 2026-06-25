@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracownia Fryzur Emilia | Siedlce - Przedłużanie, Koloryzacja, Keratyna</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root { --gold: #c5a059; }
+        body { font-family: 'Jost', sans-serif; background-color: #fff; color: #1a1a1a; overflow-x: hidden; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        
+        .nav-blur { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        
+        .hero-title { font-size: clamp(2.5rem, 10vw, 8rem); line-height: 1; }
+
+        .service-row {
+            display: flex; justify-content: space-between; align-items: flex-end;
+            padding: 10px 0; border-bottom: 1px solid #f3f4f6; transition: 0.3s;
+        }
+        .service-row:hover { border-color: var(--gold); padding-left: 8px; }
+
+        .gallery-item { overflow: hidden; position: relative; aspect-ratio: 1/1; background: #eee; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.7s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        .parallax-section { background-attachment: fixed; background-size: cover; background-position: center; }
+        @media (max-width: 768px) { .parallax-section { background-attachment: scroll; } }
+    </style>
+</head>
+<body>
+
+    <!-- Nawigacja -->
+    <nav class="fixed w-full z-[100] px-4 md:px-12 py-4 nav-blur border-b border-gray-100 flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase leading-tight serif text-black">Pracownia <span class="italic font-light">Fryzur</span></span>
+            <span class="text-[8px] tracking-[0.4em] uppercase text-gold font-bold">Pozytywnie Zakręcona • Siedlce</span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <a href="#oferta" class="hover:text-gold transition">Cennik</a>
+            <a href="#galeria" class="hover:text-gold transition">Metamorfozy</a>
+            <a href="#sluby" class="hover:text-gold transition text-red-800">Wedding 2026</a>
+            <a href="#kontakt" class="hover:text-gold transition">Kontakt</a>
+        </div>
+
+        <a href="https://booksy.com/pl-pl/273488_pracownia-fryzur_fryzjer_4669_siedlce" target="_blank" class="bg-black text-white px-6 md:px-10 py-3 text-[10px] uppercase tracking-widest hover:bg-gold transition-all font-bold">Rezerwacja</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="h-[95vh] relative flex items-center justify-center text-white overflow-hidden bg-black">
+        <img src="https://images.unsplash.com/photo-1549271568-e87e07c5406b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="relative z-10 text-center px-6" data-aos="zoom-out" data-aos-duration="2000">
+            <p class="text-[10px] md:text-xs tracking-[0.6em] uppercase font-light mb-6">Profesjonalny Salon w Siedlcach</p>
+            <h1 class="hero-title italic font-light serif mb-8">Pracownia Fryzur</h1>
+            <div class="w-24 h-px bg-gold mx-auto mb-10"></div>
+            <p class="text-[10px] md:text-xs tracking-[0.4em] uppercase font-light max-w-xl mx-auto leading-loose">Przedłużanie włosów • Keratyna • Dekoloryzacja • Śluby</p>
+        </div>
+    </section>
+
+    <!-- Cennik (Pełny z Booksy) -->
+    <section id="oferta" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-24">
+            <h2 class="text-6xl serif italic" data-aos="fade-up">Karta Usług</h2>
+            <div class="w-12 h-px bg-gold mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-16">
+            <!-- Strzyżenia -->
+            <div data-aos="fade-up">
+                <h3 class="text-[11px] uppercase tracking-[0.4em] font-bold text-gold mb-10 border-b pb-2">Strzyżenia</h3>
+                <div class="space-y-4 text-sm font-light">
+                    <div class="service-row"><span>Włosy Długie</span> <span>100 zł</span></div>
+                    <div class="service-row"><span>Włosy Średnie</span> <span>90 zł</span></div>
+                    <div class="service-row"><span>Włosy Krótkie</span> <span>80 zł+</span></div>
+                    <div class="service-row font-medium"><span>Gorącymi Nożyczkami</span> <span>150 zł</span></div>
+                    <div class="service-row"><span>Męskie</span> <span>65 zł</span></div>
+                    <div class="service-row"><span>Włosy Długie i Gęste</span> <span>130 zł+</span></div>
+                    <div class="service-row"><span>Polerowanie Włosów</span> <span>150 zł</span></div>
+                </div>
+            </div>
+
+            <!-- Stylizacja Okazjonalna -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-[11px] uppercase tracking-[0.4em] font-bold text-gold mb-10 border-b pb-2">Stylizacja & Śluby</h3>
+                <div class="space-y-4 text-sm font-light">
+                    <div class="service-row font-bold"><span>Fryzura Ślubna</span> <span>250 zł+</span></div>
+                    <div class="service-row"><span>Upięcia Włosów</span> <span>180 zł+</span></div>
+                    <div class="service-row"><span>Fale Hollywood / Objętościowe</span> <span>250 zł</span></div>
+                    <div class="service-row"><span>Kok</span> <span>170 zł</span></div>
+                    <div class="service-row"><span>Kucyk</span> <span>180 zł</span></div>
+                    <div class="service-row"><span>Loki</span> <span>150 zł</span></div>
+                    <div class="service-row"><span>Modelowanie</span> <span>65 zł</span></div>
+                </div>
+            </div>
+
+            <!-- Pielęgnacja -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-[11px] uppercase tracking-[0.4em] font-bold text-gold mb-10 border-b pb-2">Regeneracja & Prostowanie</h3>
+                <div class="space-y-4 text-sm font-light">
+                    <div class="service-row font-medium"><span>Nanoplastia</span> <span>480 zł+</span></div>
+                    <div class="service-row"><span>Keratynowe Prostowanie</span> <span>280 zł+</span></div>
+                    <div class="service-row"><span>Brazylijskie Wygładzanie</span> <span>350 zł+</span></div>
+                    <div class="service-row"><span>Botoks na włosy</span> <span>160 zł</span></div>
+                    <div class="service-row"><span>Laminowanie włosów</span> <span>150 zł</span></div>
+                    <div class="service-row"><span>Regeneracja Hyaluronic</span> <span>200 zł</span></div>
+                    <div class="service-row"><span>Sauna</span> <span>70 zł</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-20 bg-gray-50 p-12 text-center" data-aos="zoom-in">
+            <h3 class="text-3xl serif italic mb-4 text-black">Koloryzacja - NIE WIEM CO CHCĘ</h3>
+            <p class="text-sm text-gray-500 font-light mb-8 max-w-2xl mx-auto italic leading-relaxed">
+                "Farbuję z serii - nie wiem co chcę, metamorfoza życia". Zarezerwuj czas na profesjonalną konsultację i zmianę, która Cię zachwyci.
+            </p>
+            <p class="text-gold uppercase tracking-[0.4em] text-xs font-bold">Cena ustalana indywidualnie</p>
+        </div>
+    </section>
+
+    <!-- Galeria Metamorfoz -->
+    <section id="galeria" class="py-24 bg-gray-50 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-5xl serif italic" data-aos="fade-up">Portfolio Prac</h2>
+            <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mt-4 font-bold italic">Obserwuj nasze najnowsze realizacje</p>
+        </div>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
+            <!-- Miejsca na zdjęcia z FB (podmień linki) -->
+            <div class="gallery-item" data-aos="zoom-in"><img src="https://scontent-waw2-1.xx.fbcdn.net/v/t51.82787-15/700971073_17968138428101976_76395376957065934_n.webp?stp=dst-jpg_tt6&cstp=mx1440x1440&ctp=s1440x1440&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=126-SFIgKowQ7kNvwGS3wPd&_nc_oc=Adp4AunzwYUtc1abgv2jI6lo73QVVMLiMNQ938qNey20RLZW4Dwo3VSclVW8rOPE1pZbWsxgmDItKbSgTFLHtW6z&_nc_zt=23&_nc_ht=scontent-waw2-1.xx&_nc_gid=ZJlYB9O2i1sgiyZBB2j9Nw&_nc_ss=7b289&oh=00_Af-7kC_arV02D_-7lQog2gZm_COzb3NYbNaYemgShhLFNg&oe=6A429E3F"></div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/273488/inspiration/f967d4c13adc4e569528d17eb39312-pracownia-fryzur-inspiration-103816b214fc4d2c884d3e885b880e-booksy.jpeg"></div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200"><img src="https://scontent-waw2-2.xx.fbcdn.net/v/t51.75761-15/482340644_17903831274101976_4328871042912034459_n.webp?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s1080x1350&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7QBOvazom5oQ7kNvwELOsPG&_nc_oc=AdrKJ9vHFEmAlmMeU2AnIxQ70hR-Cm5NuIcE2ppez5RN7bklfPYxc3UAOQs7Wz-QQg71DJg6hqS5OlIW0muEPgUr&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=LllKxzorOpxVLkPFfp-gXQ&_nc_ss=7b289&oh=00_Af_cC64OP-aNbYgSj1mPBIK6e8EZxaLsJY-GaKrrzOxPBg&oe=6A42C0AA"></div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/273488/review_photos/0a98667b0e9d4bf68123e99d49dc1264.jpeg"></div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/273488/review_photos/455618c97e2141d28e94fa14280684d9.jpeg"></div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/273488/inspiration/346a5719ed474550836cd72e9631cb-pracownia-fryzur-inspiration-11ccd82ca5b7405a819bb8d3648210-booksy.jpeg"></div>
+        </div>
+        
+        <div class="text-center mt-16 space-y-6">
+            <p class="text-xs uppercase tracking-widest text-gray-400 font-bold">Więcej na naszych profilach:</p>
+            <div class="flex justify-center space-x-10">
+                <a href="https://www.facebook.com/PracowniaFryzurEmilia/" target="_blank" class="hover:scale-110 transition text-[#1877F2] flex flex-col items-center gap-2">
+                    <i data-lucide="facebook" size="32"></i>
+                    <span class="text-[9px] uppercase tracking-widest font-bold text-black">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/pracownia.fryzur.emilia/" target="_blank" class="hover:scale-110 transition text-[#E4405F] flex flex-col items-center gap-2">
+                    <i data-lucide="instagram" size="32"></i>
+                    <span class="text-[9px] uppercase tracking-widest font-bold text-black">Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding 2026 -->
+    <section id="sluby" class="py-40 parallax-section text-white relative" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1514451858099-83d802598681?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="max-w-4xl mx-auto text-center px-6" data-aos="fade-up">
+            <h2 class="text-6xl md:text-8xl serif italic mb-10 leading-tight">Wedding <br>2026</h2>
+            <div class="w-16 h-px bg-gold mx-auto mb-12"></div>
+            <p class="text-xs md:text-sm tracking-[0.5em] uppercase font-light mb-16 leading-loose">Poczuj się wyjątkowo w najważniejszym dniu swojego życia</p>
+            <a href="https://booksy.com/pl-pl/273488_pracownia-fryzur_fryzjer_4669_siedlce" target="_blank" class="inline-block bg-white text-black px-12 py-5 text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-gold hover:text-white transition-all">Rezerwacja Terminu</a>
+        </div>
+    </section>
+
+    <!-- Opinie (Tylko 4 najlepsze 5/5) -->
+    <section id="opinie" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-5xl serif italic mb-24" data-aos="fade-up">Zadowolone Klientki</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Opinia 1 -->
+                <div class="p-8 border border-gray-100 bg-gray-50 flex flex-col justify-between" data-aos="fade-up">
+                    <div class="mb-6"><div class="flex text-gold mb-4"><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i></div>
+                    <p class="text-sm italic text-gray-600 font-light leading-relaxed">"Jestem zachwycona efektem! Pani podjęła się trudnej dekoloryzacji na moich włosach a efekt jest nieziemski. Profesjonalizm i miła atmosfera."</p></div>
+                    <p class="text-[9px] uppercase font-bold tracking-widest text-gold">— Martyna Kościńska</p>
+                </div>
+                <!-- Opinia 2 -->
+                <div class="p-8 border border-gray-100 bg-gray-50 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6"><div class="flex text-gold mb-4"><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i></div>
+                    <p class="text-sm italic text-gray-600 font-light leading-relaxed">"Efekt końcowy przeszedł moje oczekiwania. Fryzura idealnie dopasowana, a koloryzacja wykonana z niesamowitą precyzją. Polecam!"</p></div>
+                    <p class="text-[9px] uppercase font-bold tracking-widest text-gold">— Emilia Rupińska</p>
+                </div>
+                <!-- Opinia 3 -->
+                <div class="p-8 border border-gray-100 bg-gray-50 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6"><div class="flex text-gold mb-4"><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i></div>
+                    <p class="text-sm italic text-gray-600 font-light leading-relaxed">"Pełen profesjonalizm od pierwszej do ostatniej minuty. Fryzjer doskonale doradził i doradził, co będzie pasować. Wiedza na najwyższym poziomie."</p></div>
+                    <p class="text-[9px] uppercase font-bold tracking-widest text-gold">— Michalina Zawistowska</p>
+                </div>
+                <!-- Opinia 4 -->
+                <div class="p-8 border border-gray-100 bg-gray-50 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6"><div class="flex text-gold mb-4"><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i><i data-lucide="star" size="14"></i></div>
+                    <p class="text-sm italic text-gray-600 font-light leading-relaxed">"Z zaangażowaniem wysłuchała czego oczekuję i efekt był wow. Włosy wyglądają zdrowo, kolor idealny, a cięcie układa się samo."</p></div>
+                    <p class="text-[9px] uppercase font-bold tracking-widest text-gold">— Krystian W</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer id="kontakt" class="py-24 bg-gray-50 border-t border-gray-100 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-16">
+            <div>
+                <div class="text-2xl font-bold serif uppercase mb-8">Pracownia <span class="italic font-light">Fryzur</span></div>
+                <p class="text-[9px] uppercase tracking-widest text-gray-400 font-bold italic leading-loose">Twoje piękno, nasza pasja.</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-8">Lokalizacja</h4>
+                <p class="text-sm text-gray-500 font-light leading-relaxed uppercase">ul. Czerwonego Krzyża 21/73<br>08-110 Siedlce</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-8">Kontakt</h4>
+                <p class="text-2xl serif italic mb-4">500 439 360</p>
+                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Zadzwoń do nas</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-8">Online</h4>
+                <a href="https://booksy.com/pl-pl/273488_pracownia-fryzur_fryzjer_4669_siedlce" target="_blank" class="bg-black text-white px-8 py-4 text-[10px] uppercase tracking-widest font-bold hover:bg-gold transition-all block text-center">Rezerwacja</a>
+            </div>
+        </div>
+        <div class="mt-20 pt-12 border-t border-gray-200 text-center text-[7px] uppercase tracking-[0.5em] text-gray-300">
+            © 2024 Pracownia Fryzur Emilia. Projekt: [Twoja Firma]
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+        lucide.createIcons();
+    </script>
+</body>
+</html>
